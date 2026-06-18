@@ -1,3 +1,6 @@
+---
+const { title, heroNav } = Astro.props;
+---
 <!doctype html>
 <html lang="en">
 	<head>
@@ -6,18 +9,290 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>{title ? `${title} — Nilesh Virkar` : 'Nilesh Virkar'}</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
 	</head>
 	<body>
-		<slot />
+		<header id="site-header" class:list={[{ 'hero-nav': heroNav }]}>
+			<nav>
+				<div class="nav-container">
+					<a href="/" class="site-title">Nilesh Virkar</a>
+					<button class="nav-toggle" aria-label="Toggle navigation" id="nav-toggle">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+					<ul class="nav-links" id="nav-links">
+						<li><a href="/">Home</a></li>
+						<li><a href="/profile">About</a></li>
+						<li><a href="/resume">Resume</a></li>
+						<li><a href="/blog">Blog</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<main>
+			<slot />
+		</main>
+		<footer>
+			<div class="footer-container">
+				<p class="footer-name">Nilesh Virkar</p>
+				<p class="footer-copy">&copy; 2025 · AI-focused Software Architect</p>
+			</div>
+		</footer>
 	</body>
 </html>
 
-<style>
-	html,
-	body {
+<script>
+	const header = document.getElementById('site-header');
+	window.addEventListener('scroll', () => {
+		if (window.scrollY > 60) {
+			header?.classList.add('scrolled');
+		} else {
+			header?.classList.remove('scrolled');
+		}
+	});
+
+	const navToggle = document.getElementById('nav-toggle');
+	const navLinks = document.getElementById('nav-links');
+	navToggle?.addEventListener('click', () => {
+		navLinks?.classList.toggle('open');
+		navToggle.classList.toggle('open');
+	});
+	navLinks?.querySelectorAll('a').forEach(link => {
+		link.addEventListener('click', () => {
+			navLinks.classList.remove('open');
+			navToggle?.classList.remove('open');
+		});
+	});
+</script>
+
+<style is:global>
+	*, *::before, *::after {
+		box-sizing: border-box;
+	}
+
+	html, body {
 		margin: 0;
+		padding: 0;
 		width: 100%;
-		height: 100%;
+		font-family: 'Inter', system-ui, sans-serif;
+		color: #1a1a2e;
+		background: #FFF7F4;
+	}
+
+	#site-header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 200;
+		padding: 1.25rem 0;
+		transition: background 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;
+	}
+
+	#site-header.scrolled {
+		background: rgba(255, 247, 244, 0.95);
+		backdrop-filter: blur(12px);
+		box-shadow: 0 1px 20px rgba(0, 0, 0, 0.08);
+		padding: 0.85rem 0;
+	}
+
+	.nav-container {
+		max-width: 1200px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 2rem;
+	}
+
+	/* ── Site title: Playfair Display, dark by default ── */
+	.site-title {
+		font-family: 'Playfair Display', Georgia, serif;
+		font-size: 1.25rem;
+		font-weight: 700;
+		color: #1a1a2e;
+		text-decoration: none;
+		letter-spacing: 0.01em;
+		transition: color 0.3s;
+	}
+
+	/* ── Nav links: dark by default ── */
+	.nav-links {
+		list-style: none;
+		display: flex;
+		gap: 0.25rem;
+		margin: 0;
+		padding: 0;
+	}
+
+	.nav-links a {
+		color: rgba(26, 26, 46, 0.75);
+		text-decoration: none;
+		padding: 0.5rem 1rem;
+		border-radius: 6px;
+		font-size: 0.9rem;
+		font-weight: 500;
+		transition: color 0.3s, background 0.3s;
+	}
+
+	.nav-links a:hover {
+		color: #1a1a2e;
+		background: rgba(26, 26, 46, 0.06);
+	}
+
+	/* ── Hero-nav: white text (homepage only, before scroll) ── */
+	/* Must come BEFORE .scrolled rules so scroll always wins the cascade */
+	#site-header.hero-nav .site-title {
+		color: white;
+	}
+
+	#site-header.hero-nav .nav-links a {
+		color: rgba(255, 255, 255, 0.9);
+	}
+
+	#site-header.hero-nav .nav-links a:hover {
+		color: white;
+		background: rgba(255, 255, 255, 0.15);
+	}
+
+	#site-header.hero-nav .nav-toggle span {
+		background: white;
+	}
+
+	/* ── Scrolled: always dark — declared last so it beats hero-nav ── */
+	#site-header.scrolled .site-title,
+	#site-header.scrolled .nav-links a {
+		color: #1a1a2e;
+	}
+
+	#site-header.scrolled .nav-links a:hover {
+		color: #4a6cf7;
+		background: rgba(74, 108, 247, 0.07);
+	}
+
+	#site-header.scrolled .nav-toggle span {
+		background: #1a1a2e;
+	}
+
+	/* ── Hamburger: dark bars by default ── */
+	.nav-toggle {
+		display: none;
+		flex-direction: column;
+		justify-content: center;
+		gap: 5px;
+		background: none;
+		border: none;
+		cursor: pointer;
+		padding: 6px;
+		z-index: 200;
+	}
+
+	.nav-toggle span {
+		display: block;
+		width: 22px;
+		height: 2px;
+		background: #1a1a2e;
+		border-radius: 2px;
+		transition: transform 0.3s ease, opacity 0.3s ease, background 0.3s ease;
+	}
+
+	.nav-toggle.open span:nth-child(1) {
+		transform: translateY(7px) rotate(45deg);
+	}
+
+	.nav-toggle.open span:nth-child(2) {
+		opacity: 0;
+		transform: scaleX(0);
+	}
+
+	.nav-toggle.open span:nth-child(3) {
+		transform: translateY(-7px) rotate(-45deg);
+	}
+
+	@media (max-width: 768px) {
+		.nav-toggle {
+			display: flex;
+		}
+
+		.nav-links {
+			display: none;
+			position: fixed;
+			inset: 0;
+			background: #FFF7F4;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 0.25rem;
+			z-index: 190;
+			padding: 2rem;
+		}
+
+		.nav-links.open {
+			display: flex;
+		}
+
+		.nav-links a {
+			color: #1a1a2e !important;
+			font-size: 1.4rem;
+			padding: 0.85rem 2rem;
+			width: 100%;
+			text-align: center;
+			border-radius: 10px;
+		}
+
+		.nav-links a:hover {
+			color: #4a6cf7 !important;
+			background: rgba(74, 108, 247, 0.08);
+		}
+
+		.nav-container {
+			padding: 0 1.25rem;
+		}
+
+		.site-title {
+			font-size: 1.05rem;
+			position: relative;
+			z-index: 201;
+		}
+
+		#site-header:has(.nav-links.open) .site-title {
+			color: #1a1a2e;
+		}
+
+		#site-header:has(.nav-links.open) .nav-toggle span {
+			background: #1a1a2e;
+		}
+	}
+
+	main {
+		min-height: calc(100vh - 100px);
+	}
+
+	footer {
+		background: #1a1a2e;
+		color: rgba(255,255,255,0.6);
+		padding: 2.5rem 2rem;
+		text-align: center;
+	}
+
+	.footer-container {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.footer-name {
+		font-weight: 600;
+		color: white;
+		margin: 0 0 0.25rem;
+		font-size: 1rem;
+	}
+
+	.footer-copy {
+		margin: 0;
+		font-size: 0.85rem;
 	}
 </style>

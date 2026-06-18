@@ -1,0 +1,734 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="The Repository That Mapped the Internet for Developers">
+  <article class="blog-post">
+
+    <div class="post-hero">
+      <p class="hero-eyebrow">Open Source · GitHub · Developer Culture</p>
+      <h1 class="hero-title">
+        The Repository That <span class="accent">Mapped the Internet</span> for Developers
+      </h1>
+      <p class="hero-sub">
+        How one GitHub repo with 434,000 stars became the unofficial atlas of the open source world — and why reading it is one of the most valuable things a developer can do in 2025.
+      </p>
+      <div class="byline">
+        <div class="avatar">OS</div>
+        <div>
+          <span class="byline-name">Open Source Desk</span>
+          &nbsp;·&nbsp; April 2025 &nbsp;·&nbsp; 7 min read
+        </div>
+      </div>
+    </div>
+
+    <div class="post-body">
+
+      <!-- Infographic -->
+      <figure class="infographic">
+        <img
+          src="/blog-awesome-infographic.png"
+          alt="The Modern Developer's Ecosystem: A Roadmap of Technology & Resources"
+          class="infographic-img"
+        />
+        <figcaption>The Modern Developer's Ecosystem — a map of the categories covered by the Awesome repository</figcaption>
+      </figure>
+
+      <!-- Stats -->
+      <div class="stats-row">
+        <div class="stat-card">
+          <span class="stat-num">434K</span>
+          <span class="stat-label">GitHub stars</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">33K</span>
+          <span class="stat-label">Forks worldwide</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">300+</span>
+          <span class="stat-label">Curated topics</span>
+        </div>
+      </div>
+
+      <div class="callout">
+        <strong>About the ecosystem map:</strong> The infographic above charts the categories covered by the <em>Awesome</em> repository — from core programming languages and full-stack frameworks to the intelligence layer (ML, GenAI, NLP) and decentralized systems. Every branch represents a living ecosystem, built and maintained by real developers around the world.
+      </div>
+
+      <!-- The Origin -->
+      <p class="section-label">The Origin</p>
+      <h2 class="section-h2">A single README that changed how devs discover tools</h2>
+      <p class="prose">
+        In 2014, developer Sindre Sorhus pushed a file to GitHub with a deceptively modest title: <em>awesome</em>. It was a curated list of resources — tools, frameworks, articles — organized by topic. No algorithm. No ads. Just one developer's opinionated, lovingly maintained list of things he found genuinely useful.
+      </p>
+      <p class="prose">
+        What happened next was a testament to how starved the community was for exactly this kind of signal. Developers forked it, spun off their own "awesome-X" lists, and contributed back. Today, the <strong>sindresorhus/awesome</strong> repository sits at over 434,000 stars — making it one of the most starred repositories in the history of GitHub — and acts as a meta-directory: a curated list of curated lists.
+      </p>
+
+      <blockquote class="quote-block">
+        "There are amazing things happening in the open source community. We need people to be aware of it."
+        <cite>— Sindre Sorhus, creator of Awesome</cite>
+      </blockquote>
+
+      <hr class="divider" />
+
+      <!-- Explore the ecosystem -->
+      <p class="section-label">Explore the ecosystem</p>
+      <h2 class="section-h2">Six pillars of the modern developer's world</h2>
+      <p class="prose" style="margin-bottom:1rem;">Click a domain to learn more about what Awesome covers in that space:</p>
+
+      <div class="domain-grid" id="domainGrid">
+        <div class="domain-card active" data-id="0" onclick="selectDomain(0)">
+          <span class="domain-icon">⚙️</span>
+          <div class="domain-name">Languages & Runtimes</div>
+          <div class="domain-count">70+ awesome lists</div>
+          <div class="domain-bar" style="width:90%"></div>
+        </div>
+        <div class="domain-card" data-id="1" onclick="selectDomain(1)">
+          <span class="domain-icon">🧱</span>
+          <div class="domain-name">Frameworks & Tools</div>
+          <div class="domain-count">60+ awesome lists</div>
+          <div class="domain-bar" style="width:75%"></div>
+        </div>
+        <div class="domain-card" data-id="2" onclick="selectDomain(2)">
+          <span class="domain-icon">🤖</span>
+          <div class="domain-name">AI & Machine Learning</div>
+          <div class="domain-count">45+ awesome lists</div>
+          <div class="domain-bar" style="width:58%"></div>
+        </div>
+        <div class="domain-card" data-id="3" onclick="selectDomain(3)">
+          <span class="domain-icon">🔒</span>
+          <div class="domain-name">Security & DevOps</div>
+          <div class="domain-count">40+ awesome lists</div>
+          <div class="domain-bar" style="width:50%"></div>
+        </div>
+        <div class="domain-card" data-id="4" onclick="selectDomain(4)">
+          <span class="domain-icon">📱</span>
+          <div class="domain-name">Cross-Platform & Mobile</div>
+          <div class="domain-count">35+ awesome lists</div>
+          <div class="domain-bar" style="width:44%"></div>
+        </div>
+        <div class="domain-card" data-id="5" onclick="selectDomain(5)">
+          <span class="domain-icon">⛓️</span>
+          <div class="domain-name">Blockchain & Web3</div>
+          <div class="domain-count">20+ awesome lists</div>
+          <div class="domain-bar" style="width:28%"></div>
+        </div>
+      </div>
+
+      <div class="detail-box" id="detailBox">
+        <h4>Languages & Runtimes</h4>
+        <p>The foundation of everything. Awesome covers JavaScript, Python, Rust, Go, Swift, R, C++, and dozens more. Lists like <em>awesome-python</em> alone link to hundreds of libraries for web, data, ML, and automation — giving beginners a curated start and veterans a way to discover niche gems they'd never Google.</p>
+        <div class="tag-row">
+          <span class="tag">JavaScript</span>
+          <span class="tag">Python</span>
+          <span class="tag">Rust</span>
+          <span class="tag">Go</span>
+          <span class="tag">Swift</span>
+          <span class="tag">R</span>
+          <span class="tag">TypeScript</span>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- Why it matters -->
+      <p class="section-label">Why it matters</p>
+      <h2 class="section-h2">Reading GitHub is reading the future</h2>
+      <p class="prose">
+        Most developers discover new tools through Twitter, Hacker News, or word of mouth — all of which are subject to noise, hype cycles, and popularity bias. The Awesome ecosystem cuts through that. Each list is maintained by practitioners who use these tools daily, which means recommendations carry real signal.
+      </p>
+      <p class="prose">
+        Beyond discovery, reading these repositories teaches you something deeper: how communities self-organize. A language's most-starred repos tell you what problems developers in that community consider unsolved. The gaps in an awesome list tell you where the next wave of tooling is being built.
+      </p>
+
+      <!-- Timeline -->
+      <div class="timeline">
+        <div class="tl-item highlight">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2014</div>
+          <div class="tl-text"><span class="tl-bold">Awesome is born.</span> Sindre Sorhus starts the repo as a personal curation project. First 100 stars arrive within days.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2016</div>
+          <div class="tl-text"><span class="tl-bold">The "awesome-X" pattern emerges.</span> Hundreds of community-driven spin-offs appear: awesome-react, awesome-vue, awesome-machine-learning.</div>
+        </div>
+        <div class="tl-item highlight">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2019</div>
+          <div class="tl-text"><span class="tl-bold">100,000 stars milestone.</span> The pattern proves that human curation beats algorithmic ranking for developer resources.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2022–23</div>
+          <div class="tl-text"><span class="tl-bold">The AI wave hits.</span> Awesome lists for LLMs, prompt engineering, and generative AI repositories see explosive growth and contributions.</div>
+        </div>
+        <div class="tl-item highlight">
+          <div class="tl-dot"></div>
+          <div class="tl-year">2025</div>
+          <div class="tl-text"><span class="tl-bold">434,000+ stars.</span> The repo remains among GitHub's most-starred ever — a living proof that community knowledge scales.</div>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- How to read it -->
+      <p class="section-label">How to read it</p>
+      <h2 class="section-h2">Five ways to get the most from Awesome</h2>
+      <div class="tips-list">
+        <div class="reading-tip">
+          <div class="tip-num">1</div>
+          <div class="tip-text"><strong>Start with your current language.</strong> Find the awesome-[language] list for the language you use daily. Scan the "useful" sections — you'll almost always find a library you didn't know existed but immediately need.</div>
+        </div>
+        <div class="reading-tip">
+          <div class="tip-num">2</div>
+          <div class="tip-text"><strong>Read adjacent domains.</strong> If you're a frontend dev, read awesome-backend and vice versa. Understanding neighboring stacks makes you a better engineer and a better collaborator.</div>
+        </div>
+        <div class="reading-tip">
+          <div class="tip-num">3</div>
+          <div class="tip-text"><strong>Watch the contribution dates.</strong> A list that hasn't been updated in 18+ months may reflect a stagnant ecosystem. A rapidly growing list is a signal about where developer energy is flowing.</div>
+        </div>
+        <div class="reading-tip">
+          <div class="tip-num">4</div>
+          <div class="tip-text"><strong>Follow the rabbit holes.</strong> Each linked repo has its own README, issues, and contributors. Following a single awesome entry often leads you to entire communities you didn't know existed.</div>
+        </div>
+        <div class="reading-tip">
+          <div class="tip-num">5</div>
+          <div class="tip-text"><strong>Contribute back.</strong> Found a tool that should be on a list? Submit a pull request. This is how open source grows, and how you become part of the ecosystem rather than just a consumer of it.</div>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- The bigger picture -->
+      <p class="section-label">The bigger picture</p>
+      <h2 class="section-h2">Open source isn't a movement anymore — it's the infrastructure</h2>
+      <p class="prose">
+        The modern developer ecosystem isn't a few big players — it's a dense, interconnected web spanning languages, platforms, domains, and disciplines. Open source is the connective tissue that holds it all together.
+      </p>
+      <p class="prose">
+        Repositories like <em>Awesome</em> are the maps of this territory. They don't just list tools — they reveal how communities think about their problems. The fact that "Security & DevOps" and "AI/ML" are the two fastest-growing sections isn't a coincidence; it mirrors exactly where industry investment and developer attention are flowing.
+      </p>
+      <p class="prose">
+        Every star on a GitHub repo is a developer saying: <em>this matters</em>. With 434,000 stars, Awesome is saying something remarkable — that in an age of algorithmic curation and AI-powered search, humans still trust humans to point the way.
+      </p>
+
+      <!-- CTA -->
+      <div class="cta-area">
+        <h3>Ready to explore?</h3>
+        <p>Dive into the Awesome repository and start discovering the tools shaping modern software.</p>
+        <a class="cta-btn" href="https://github.com/sindresorhus/awesome" target="_blank" rel="noopener">Open on GitHub ↗</a>
+        <a class="cta-btn" href="https://github.com/josephmisiti/awesome-machine-learning" target="_blank" rel="noopener">Explore AI lists ↗</a>
+        <a class="cta-btn" href="https://github.com/nicandro/awesome-Frontend-Learning-Resource" target="_blank" rel="noopener">Web dev picks ↗</a>
+      </div>
+
+    </div>
+
+    <footer class="post-footer">
+      <a href="/blog" class="back-link">← Back to Blog</a>
+    </footer>
+
+  </article>
+</Layout>
+
+<script>
+  const domainDetails = [
+    {
+      title: "Languages & Runtimes",
+      text: "The foundation of everything. Awesome covers JavaScript, Python, Rust, Go, Swift, R, C++, and dozens more. Lists like <em>awesome-python</em> alone link to hundreds of libraries for web, data, ML, and automation — giving beginners a curated start and veterans a way to discover niche gems they'd never Google.",
+      tags: ["JavaScript", "Python", "Rust", "Go", "Swift", "R", "TypeScript"]
+    },
+    {
+      title: "Frameworks & Tools",
+      text: "React, Vue, Django, Rails, Docker, Kubernetes — the Awesome ecosystem maps every major framework and its surrounding toolchain. Whether you're architecting a microservices backend or building a CLI tool, there's a curated list that reflects real production experience.",
+      tags: ["React", "Vue", "Docker", "Kubernetes", "Laravel", "FastAPI", "Next.js"]
+    },
+    {
+      title: "AI & Machine Learning",
+      text: "One of the fastest-growing sections since 2022. Lists for PyTorch, TensorFlow, LLMs, prompt engineering, vector databases, and generative AI are maintained by practitioners on the cutting edge. Reading these is one of the fastest ways to understand the current state of applied AI.",
+      tags: ["PyTorch", "LLMs", "Prompt Eng.", "RAG", "Stable Diffusion", "Embeddings"]
+    },
+    {
+      title: "Security & DevOps",
+      text: "Covering ethical hacking, malware analysis, CI/CD security, and infrastructure tooling — this domain reflects the growing maturity of developer security culture. Awesome-hacking and awesome-devsecops are among the most frequently updated lists, reflecting how fast the threat landscape changes.",
+      tags: ["Ethical Hacking", "SAST/DAST", "CI/CD", "Terraform", "Vault", "Zero Trust"]
+    },
+    {
+      title: "Cross-Platform & Mobile",
+      text: "From Flutter and React Native to cloud-native Kubernetes and IoT edge computing, this domain covers the sprawling landscape of modern deployment targets. These lists are invaluable for developers who need to support multiple platforms without duplicating effort.",
+      tags: ["Flutter", "React Native", "iOS", "Android", "AWS", "GCP", "IoT"]
+    },
+    {
+      title: "Blockchain & Web3",
+      text: "Despite market cycles, the technical infrastructure around Ethereum, IPFS, and smart contract development has continued growing. Awesome-ethereum and decentralized systems lists surface robust open source tooling that often gets overlooked in the mainstream developer conversation.",
+      tags: ["Ethereum", "Solidity", "IPFS", "Web3.js", "Hardhat", "Chainlink"]
+    }
+  ];
+
+  function selectDomain(id) {
+    document.querySelectorAll('.domain-card').forEach(c => c.classList.remove('active'));
+    document.querySelector('[data-id="' + id + '"]').classList.add('active');
+    const d = domainDetails[id];
+    const box = document.getElementById('detailBox');
+    box.innerHTML = '<h4>' + d.title + '</h4><p>' + d.text + '</p><div class="tag-row">' +
+      d.tags.map(t => '<span class="tag">' + t + '</span>').join('') + '</div>';
+  }
+</script>
+
+<style>
+  /* ── Page wrapper ── */
+  .blog-post {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+  }
+
+  /* ── Hero block ── */
+  .post-hero {
+    padding: 7rem 0 2.5rem;
+    border-bottom: 1px solid rgba(26, 26, 46, 0.08);
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #4a6cf7;
+    margin-bottom: 1rem;
+  }
+
+  .hero-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(2rem, 5vw, 3.1rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: #1a1a2e;
+    margin: 0 0 1.2rem;
+  }
+
+  .hero-title .accent {
+    background: linear-gradient(135deg, #4a6cf7, #7c4dff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-sub {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: #5a6072;
+    max-width: 620px;
+    margin-bottom: 2rem;
+  }
+
+  .byline {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.85rem;
+    color: #7f8c8d;
+  }
+
+  .avatar {
+    width: 34px; height: 34px; border-radius: 50%;
+    background: linear-gradient(135deg, #4a6cf7, #7c4dff);
+    display: flex; align-items: center; justify-content: center;
+    color: white; font-size: 12px; font-weight: 600; flex-shrink: 0;
+  }
+
+  .byline-name { font-weight: 600; color: #1a1a2e; }
+
+  /* ── Body content ── */
+  .post-body {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  /* ── Infographic ── */
+  .infographic {
+    margin: 0 0 2.5rem;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(74, 108, 247, 0.12);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  }
+
+  .infographic-img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .infographic figcaption {
+    background: rgba(74, 108, 247, 0.04);
+    border-top: 1px solid rgba(74, 108, 247, 0.1);
+    padding: 0.65rem 1rem;
+    font-size: 0.78rem;
+    color: #7f8c8d;
+    text-align: center;
+    font-style: italic;
+  }
+
+  /* ── Stats ── */
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 2.5rem;
+  }
+
+  .stat-card {
+    background: white;
+    border-radius: 16px;
+    padding: 1.25rem 1rem;
+    text-align: center;
+    border: 1px solid rgba(74, 108, 247, 0.1);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  }
+
+  .stat-num {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #4a6cf7;
+    display: block;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+    color: #7f8c8d;
+    margin-top: 4px;
+    font-weight: 500;
+  }
+
+  /* ── Callout ── */
+  .callout {
+    border: 1px solid rgba(74, 108, 247, 0.15);
+    border-left: 3px solid #4a6cf7;
+    border-radius: 0 10px 10px 0;
+    padding: 1rem 1.25rem;
+    margin-bottom: 2.5rem;
+    background: rgba(74, 108, 247, 0.04);
+    font-size: 0.9rem;
+    color: #5a6072;
+    line-height: 1.65;
+  }
+
+  .callout strong { color: #1a1a2e; font-weight: 600; }
+
+  /* ── Section labels ── */
+  .section-label {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #4a6cf7;
+    margin-bottom: 0.5rem;
+  }
+
+  .section-h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.4rem, 3vw, 1.75rem);
+    font-weight: 700;
+    color: #1a1a2e;
+    margin: 0 0 1rem;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+  }
+
+  .prose {
+    font-size: 0.98rem;
+    line-height: 1.85;
+    color: #5a6072;
+    margin-bottom: 1.5rem;
+  }
+
+  /* ── Quote ── */
+  .quote-block {
+    border-left: 3px solid #4a6cf7;
+    padding: 0.85rem 1.25rem;
+    margin: 2rem 0;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    font-style: italic;
+    color: #5a6072;
+    background: rgba(74, 108, 247, 0.03);
+    border-radius: 0 8px 8px 0;
+  }
+
+  .quote-block cite {
+    display: block;
+    font-size: 0.8rem;
+    font-style: normal;
+    margin-top: 8px;
+    color: #7f8c8d;
+    font-weight: 500;
+  }
+
+  /* ── Divider ── */
+  .divider {
+    border: none;
+    border-top: 1px solid rgba(26, 26, 46, 0.08);
+    margin: 2.5rem 0;
+  }
+
+  /* ── Domain cards ── */
+  .domain-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    margin-bottom: 1.5rem;
+  }
+
+  .domain-card {
+    background: white;
+    border: 1px solid rgba(74, 108, 247, 0.1);
+    border-radius: 14px;
+    padding: 1rem 1.1rem;
+    cursor: pointer;
+    transition: border-color 0.2s, transform 0.15s, box-shadow 0.2s;
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+
+  .domain-card:hover {
+    border-color: rgba(74, 108, 247, 0.35);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(74, 108, 247, 0.12);
+  }
+
+  .domain-card.active {
+    border-color: #4a6cf7;
+    box-shadow: 0 4px 20px rgba(74, 108, 247, 0.18);
+  }
+
+  .domain-icon { font-size: 1.4rem; margin-bottom: 8px; display: block; }
+  .domain-name { font-size: 0.88rem; font-weight: 600; color: #1a1a2e; margin-bottom: 4px; }
+  .domain-count { font-size: 0.75rem; color: #7f8c8d; }
+
+  .domain-bar {
+    position: absolute; bottom: 0; left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #4a6cf7, #7c4dff);
+    transition: width 0.4s ease;
+    border-radius: 0 2px 0 0;
+  }
+
+  /* ── Detail box ── */
+  .detail-box {
+    background: white;
+    border: 1px solid rgba(74, 108, 247, 0.1);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  }
+
+  .detail-box h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin: 0 0 0.6rem;
+    letter-spacing: -0.01em;
+  }
+
+  .detail-box p {
+    font-size: 0.9rem;
+    line-height: 1.75;
+    color: #5a6072;
+    margin: 0;
+  }
+
+  .tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 12px;
+  }
+
+  .tag {
+    font-size: 0.72rem;
+    padding: 4px 10px;
+    border-radius: 100px;
+    background: rgba(74, 108, 247, 0.06);
+    border: 1px solid rgba(74, 108, 247, 0.2);
+    color: #4a6cf7;
+    font-weight: 500;
+  }
+
+  /* ── Timeline ── */
+  .timeline {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 2.5rem;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 7px; top: 6px; bottom: 6px;
+    width: 1px;
+    background: rgba(74, 108, 247, 0.2);
+  }
+
+  .tl-item { position: relative; margin-bottom: 1.5rem; }
+
+  .tl-dot {
+    position: absolute; left: -24px; top: 4px;
+    width: 10px; height: 10px; border-radius: 50%;
+    background: #FFF7F4;
+    border: 2px solid rgba(74, 108, 247, 0.3);
+  }
+
+  .tl-item.highlight .tl-dot {
+    background: #4a6cf7;
+    border-color: #4a6cf7;
+    box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.15);
+  }
+
+  .tl-year {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #4a6cf7;
+    margin-bottom: 3px;
+    letter-spacing: 0.06em;
+  }
+
+  .tl-text {
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: #5a6072;
+  }
+
+  .tl-bold { font-weight: 600; color: #1a1a2e; }
+
+  /* ── Reading tips ── */
+  .tips-list { margin-bottom: 2rem; display: flex; flex-direction: column; gap: 10px; }
+
+  .reading-tip {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    padding: 1rem 1.25rem;
+    background: white;
+    border: 1px solid rgba(74, 108, 247, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+
+  .tip-num {
+    width: 26px; height: 26px; flex-shrink: 0; border-radius: 50%;
+    background: linear-gradient(135deg, #4a6cf7, #7c4dff);
+    color: white;
+    font-size: 0.72rem; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    margin-top: 1px;
+  }
+
+  .tip-text {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: #5a6072;
+  }
+
+  .tip-text strong { color: #1a1a2e; font-weight: 600; }
+
+  /* ── CTA ── */
+  .cta-area {
+    background: linear-gradient(135deg, rgba(74, 108, 247, 0.08), rgba(124, 77, 255, 0.08));
+    border: 1px solid rgba(74, 108, 247, 0.15);
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .cta-area h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin: 0 0 0.5rem;
+    letter-spacing: -0.02em;
+  }
+
+  .cta-area p {
+    font-size: 0.9rem;
+    color: #5a6072;
+    margin: 0 0 1.25rem;
+    line-height: 1.65;
+  }
+
+  .cta-btn {
+    display: inline-block;
+    padding: 0.65rem 1.35rem;
+    border-radius: 8px;
+    border: 1.5px solid #4a6cf7;
+    color: #4a6cf7;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    background: transparent;
+    transition: background 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+    margin: 4px;
+  }
+
+  .cta-btn:hover {
+    background: linear-gradient(135deg, #4a6cf7, #7c4dff);
+    border-color: transparent;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(74, 108, 247, 0.3);
+  }
+
+  /* ── Post footer ── */
+  .post-footer {
+    margin-top: 3.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(26, 26, 46, 0.08);
+    text-align: center;
+  }
+
+  .back-link {
+    color: #4a6cf7;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    padding: 0.7rem 1.5rem;
+    border: 1.5px solid #4a6cf7;
+    border-radius: 8px;
+    transition: all 0.25s;
+  }
+
+  .back-link:hover {
+    background: linear-gradient(135deg, #4a6cf7, #7c4dff);
+    border-color: transparent;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(74, 108, 247, 0.3);
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 768px) {
+    .post-hero {
+      padding: 5.5rem 0 2rem;
+    }
+
+    .stats-row {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+
+    .stat-num { font-size: 1.5rem; }
+
+    .domain-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

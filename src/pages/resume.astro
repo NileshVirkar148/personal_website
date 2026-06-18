@@ -1,0 +1,415 @@
+---
+import Layout from '../layouts/Layout.astro';
+import resumePdf from '../assets/Nilesh Virkar - Resume.pdf';
+
+const title = "Resume";
+---
+
+<Layout title={title}>
+	<div class="resume">
+		<header class="resume-header">
+			<h1>Nilesh Virkar</h1>
+			<h2>Team Lead & Software Architect | AI-Driven Backend Systems</h2>
+			<div class="contact-info">
+				<span>Pune, India</span> |
+				<span>nilesha148@gmail.com</span> |
+				<a href="https://www.linkedin.com/in/nilesh-virkar-311a4346" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+			</div>
+			<a class="download-button" href={resumePdf} download>
+				Download Resume PDF
+			</a>
+		</header>
+
+		<section class="resume-section">
+			<h2>Professional Summary</h2>
+			<p>
+				Senior Software Engineer & Technical Architect with 13+ years of experience building scalable backend platforms, static code analysis systems, and AI-driven developer tools. Currently leading engineering initiatives at BrowserStack (post Embold Technologies GmbH acquisition), driving system architecture, AI adoption, and enterprise-scale platform growth.
+			</p>
+			<ul>
+				<li>Led development of high-performance static analysis engines (anti-pattern & duplication detection)</li>
+				<li>Built multi-language developer tooling ecosystem — IDE plugins + backend services</li>
+				<li>Driving LLM integration into developer workflows</li>
+				<li>Deep experience with enterprise clients, including German banking systems</li>
+			</ul>
+		</section>
+
+		<section class="resume-section">
+			<h2>Core Skills</h2>
+			<div class="skills-container">
+				<div class="skill-group">
+					<h3>Languages</h3>
+					<ul>
+						<li>Java</li>
+						<li>Python</li>
+						<li>C</li>
+						<li>C++</li>
+					</ul>
+				</div>
+				<div class="skill-group">
+					<h3>Backend & Cloud</h3>
+					<ul>
+						<li>Spring Boot</li>
+						<li>Tomcat</li>
+						<li>AWS</li>
+						<li>Hadoop</li>
+						<li>Kafka</li>
+					</ul>
+				</div>
+				<div class="skill-group">
+					<h3>DevOps & Infra</h3>
+					<ul>
+						<li>Docker</li>
+						<li>Kubernetes (K8s)</li>
+						<li>Helm</li>
+						<li>CI/CD</li>
+						<li>Jenkins / GitHub Actions</li>
+					</ul>
+				</div>
+				<div class="skill-group">
+					<h3>Frontend</h3>
+					<ul>
+						<li>JavaScript</li>
+						<li>JSF</li>
+					</ul>
+				</div>
+				<div class="skill-group">
+					<h3>Architecture</h3>
+					<ul>
+						<li>System Design</li>
+						<li>Scalable Backend</li>
+						<li>Distributed Systems</li>
+					</ul>
+				</div>
+				<div class="skill-group">
+					<h3>Specialization</h3>
+					<ul>
+						<li>Static Code Analysis</li>
+						<li>Anti-pattern Detection</li>
+						<li>Code Duplication</li>
+					</ul>
+				</div>
+				<div class="skill-group">
+					<h3>AI / ML</h3>
+					<ul>
+						<li>LLM Integration</li>
+						<li>AI-assisted Dev Workflows</li>
+						<li>Local LLMs (Ollama)</li>
+					</ul>
+				</div>
+				<div class="skill-group">
+					<h3>AI Dev Tools</h3>
+					<ul>
+						<li>Claude Code</li>
+						<li>VS Code Copilot</li>
+						<li>MCP Servers</li>
+						<li>Cursor</li>
+						<li>Prompt Engineering</li>
+					</ul>
+				</div>
+				<div class="skill-group">
+					<h3>Tools</h3>
+					<ul>
+						<li>Eclipse</li>
+						<li>VS Code</li>
+						<li>Visual Studio Plugin Dev</li>
+					</ul>
+				</div>
+				<div class="skill-group">
+					<h3>Leadership</h3>
+					<ul>
+						<li>Team Management</li>
+						<li>Stakeholder Communication</li>
+						<li>POC Delivery</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section class="resume-section">
+			<h2>Professional Experience</h2>
+			<div class="experience-item">
+				<h3>BrowserStack</h3>
+				<h4>Team Lead | Forward Deployment & Solutions Engineering | May 2025 – Present</h4>
+				<ul>
+					<li>Leading end-to-end deployment of Code Quality platform into enterprise customer environments (on-prem & cloud).</li>
+					<li>Owning customer-facing technical architecture decisions, AWS infrastructure, and Kubernetes-based deployments.</li>
+					<li>Driving AI adoption by integrating LLM-based developer tools directly into customer CI/CD workflows.</li>
+					<li>Acting as primary technical liaison — translating customer requirements into scoped, deployable solutions.</li>
+					<li>Managing team delivery, sprint planning, and cross-functional technical direction.</li>
+				</ul>
+				<p class="key-impact-label">Key Impact</p>
+				<ul>
+					<li>Successfully onboarded enterprise customers with complex on-prem and air-gapped infrastructure requirements.</li>
+					<li>Reduced deployment turnaround time through Kubernetes automation and reusable deployment templates.</li>
+					<li>Improved developer productivity at customer sites via AI-assisted workflow integrations.</li>
+				</ul>
+			</div>
+
+			<div class="experience-item">
+				<h3>BrowserStack</h3>
+				<h4>Senior Software Engineer | Solutions & Deployment Engineering | May 2023 – May 2025</h4>
+				<ul>
+					<li>Deployed and integrated enterprise static analysis platform into customer CI/CD and on-prem environments.</li>
+					<li>Led customer-facing technical implementations, onboarding, and troubleshooting sessions.</li>
+					<li>Optimized Kubernetes-based deployments and scaling strategies for large-scale scanning workloads.</li>
+					<li>Debugged production issues across distributed services, databases, and Kafka messaging pipelines.</li>
+					<li>Collaborated with customers to gather requirements and implement infrastructure automation improvements.</li>
+				</ul>
+				<p class="key-impact-label">Key Impact</p>
+				<ul>
+					<li>Enabled early-stage AI feature adoption at customer sites with measurable productivity gains.</li>
+					<li>Reduced customer escalation resolution time through systematic distributed-system debugging practices.</li>
+				</ul>
+			</div>
+
+			<div class="experience-item">
+				<h3>Embold Technologies GmbH</h3>
+				<h4>Engineering Lead | Forward Deployment Engineer | Aug 2021 – May 2023</h4>
+				<ul>
+					<li>Led deployment and integration of flagship static code analysis product across enterprise client environments.</li>
+					<li>Served as primary solutions engineer — owning end-to-end customer technical onboarding and POC delivery.</li>
+					<li>Worked on-site and remotely with enterprise clients to implement, configure, and validate platform deployments.</li>
+					<li>Designed core analysis algorithms and backend architecture to meet diverse customer scalability requirements.</li>
+					<li>Collaborated directly with stakeholders to translate business requirements into implemented platform features.</li>
+				</ul>
+				<p class="key-impact-label">Key Impact</p>
+				<ul>
+					<li>Delivered production-grade deployments to multiple enterprise clients, accelerating time-to-value.</li>
+					<li>Drove POC-to-production conversion through hands-on customer engagement and technical credibility.</li>
+				</ul>
+			</div>
+
+			<div class="experience-item">
+				<h3>Embold Technologies GmbH</h3>
+				<h4>Team Lead / Senior Software Engineer | 2017 – 2021</h4>
+				<ul>
+					<li>Designed and optimized anti-pattern detection and code duplication algorithms at the core of the platform.</li>
+					<li>Architected scalable backend services and supported customer-facing deployment configurations.</li>
+					<li>Built IDE plugins for Eclipse, VS Code, and Visual Studio to extend platform reach into developer workflows.</li>
+					<li>Contributed to customer environment integrations and CI/CD pipeline setups during early product growth.</li>
+				</ul>
+				<p class="key-impact-label">Key Impact</p>
+				<ul>
+					<li>Established the algorithmic foundation powering enterprise-scale code analysis.</li>
+					<li>Expanded product ecosystem with multi-IDE integrations adopted across customer developer teams.</li>
+				</ul>
+			</div>
+
+			<div class="experience-item">
+				<h3>Mobilators</h3>
+				<h4>Trainee Software Engineer → Software Engineer | Dec 2012 – Sep 2015</h4>
+				<p>Worked on iOS game development, a calendar app, and a health tracking platform built on Java, Spring Boot, and Hadoop.</p>
+			</div>
+		</section>
+
+		<section class="resume-section">
+			<h2>Key Projects</h2>
+			<div class="project-item">
+				<h3>Static Code Analysis Platform — Embold / BrowserStack</h3>
+				<p class="project-tech">Java, Spring Boot, AWS, Kubernetes, LLM Integration</p>
+				<ul>
+					<li>Designed end-to-end backend architecture for the analysis platform.</li>
+					<li>Built high-performance engines for anti-pattern and code duplication detection.</li>
+					<li>Developed IDE plugins across Eclipse, VS Code, and Visual Studio.</li>
+					<li>Integrated local LLMs to provide enhanced developer code insights.</li>
+				</ul>
+				<p class="key-impact-label">Impact</p>
+				<ul>
+					<li>Delivered a scalable developer productivity platform adopted at enterprise scale.</li>
+					<li>Enabled AI-powered code insights and workflow automation.</li>
+				</ul>
+			</div>
+
+			<div class="project-item">
+				<h3>MIPP Banking Portal — German Banking Client</h3>
+				<p class="project-tech">Java, JSF, Enterprise Backend</p>
+				<ul>
+					<li>Developed a secure, enterprise-grade banking portal for a German financial institution.</li>
+					<li>Worked on-site with client teams for delivery, integration, and acceptance.</li>
+					<li>Built scalable backend features using Java and JSF.</li>
+				</ul>
+				<p class="key-impact-label">Impact</p>
+				<ul>
+					<li>Delivered a highly reliable and secure financial system on time.</li>
+					<li>Strengthened long-term client trust and engagement.</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="resume-section">
+			<h2>Education</h2>
+			<div class="education-item">
+				<h3>Master of Computer Science</h3>
+				<p>Savitribai Phule Pune University</p>
+			</div>
+		</section>
+	</div>
+</Layout>
+
+<style>
+	.resume {
+		max-width: 800px;
+		margin: 0 auto;
+		background: white;
+		padding: 2rem;
+		border-radius: 8px;
+		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+		margin-top: 5.5rem;
+		margin-bottom: 3rem;
+	}
+
+	.resume-header {
+		text-align: center;
+		margin-bottom: 2rem;
+		padding-bottom: 1rem;
+		border-bottom: 2px solid #3498db;
+	}
+
+	.resume-header h1 {
+		margin: 0 0 0.5rem 0;
+		color: #2c3e50;
+		font-size: clamp(1.8rem, 5vw, 2.5rem);
+	}
+
+	.resume-header h2 {
+		margin: 0 0 1rem 0;
+		color: #3498db;
+		font-size: clamp(0.95rem, 2.5vw, 1.3rem);
+	}
+
+	.contact-info {
+		color: #7f8c8d;
+		font-size: 0.95rem;
+	}
+
+	.download-button {
+		display: inline-block;
+		margin-top: 1rem;
+		padding: 0.75rem 1.5rem;
+		background: #3498db;
+		color: white;
+		text-decoration: none;
+		border-radius: 6px;
+		transition: background 0.3s;
+	}
+
+	.download-button:hover {
+		background: #2c80c6;
+	}
+
+	.resume-section {
+		margin-bottom: 2rem;
+	}
+
+	.resume-section h2 {
+		color: #2c3e50;
+		border-bottom: 1px solid #ecf0f1;
+		padding-bottom: 0.5rem;
+		margin-bottom: 1rem;
+		font-size: 1.5rem;
+	}
+
+	.experience-item,
+	.education-item,
+	.project-item {
+		margin-bottom: 1.5rem;
+	}
+
+	.experience-item h3,
+	.education-item h3,
+	.project-item h3 {
+		margin: 0 0 0.25rem 0;
+		color: #2c3e50;
+		font-size: 1.2rem;
+	}
+
+	.experience-item h4,
+	.education-item h4 {
+		margin: 0 0 0.5rem 0;
+		color: #7f8c8d;
+		font-weight: normal;
+		font-size: 1rem;
+	}
+
+	.experience-item ul,
+	.education-item p {
+		margin: 0.5rem 0;
+		padding-left: 1.5rem;
+	}
+
+	.experience-item li {
+		margin-bottom: 0.5rem;
+		line-height: 1.6;
+	}
+
+	.skills-container {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 2rem;
+	}
+
+	.skill-group h3 {
+		color: #2c3e50;
+		margin-bottom: 0.5rem;
+		font-size: 1.1rem;
+	}
+
+	.skill-group ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	.skill-group li {
+		background: #f8f9fa;
+		padding: 0.25rem 0.5rem;
+		margin-bottom: 0.25rem;
+		border-radius: 3px;
+		font-size: 0.9rem;
+	}
+
+	.key-impact-label {
+		color: #3498db;
+		font-size: 0.85rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		margin: 0.75rem 0 0.25rem;
+	}
+
+	.project-tech {
+		color: #7f8c8d;
+		font-size: 0.9rem;
+		margin: 0.25rem 0 0.5rem 0;
+		font-style: italic;
+	}
+
+	.project-item p {
+		line-height: 1.6;
+		margin-bottom: 0.5rem;
+	}
+
+	.resume-section:last-of-type ul {
+		padding-left: 1.5rem;
+	}
+
+	.resume-section:last-of-type li {
+		margin-bottom: 0.5rem;
+	}
+
+	@media (max-width: 768px) {
+		.resume {
+			margin: 5rem 1rem 2rem;
+			padding: 1.25rem;
+			border-radius: 6px;
+		}
+
+		.contact-info {
+			font-size: 0.85rem;
+			line-height: 1.8;
+		}
+
+		.skills-container {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
