@@ -7,9 +7,6 @@ const title = "Profile";
 <Layout title={title}>
 	<section class="profile">
 		<div class="profile-header">
-			<div class="profile-image">
-				<img src="/profile1.jpeg" alt="Nilesh Virkar" width="150" height="150" />
-			</div>
 			<div class="profile-info">
 				<h1>Nilesh Virkar</h1>
 				<h2>Team Lead & Software Architect | AI-Driven Backend Systems</h2>
@@ -21,7 +18,7 @@ const title = "Profile";
 			<div class="about-section">
 				<h2>About Me</h2>
 				<p>
-					Senior Software Engineer & Technical Architect with 13+ years of experience building scalable backend platforms, static code analysis systems, and AI-driven developer tools. Currently leading engineering initiatives at BrowserStack (post Embold Technologies GmbH acquisition), driving system architecture, AI adoption, and enterprise-scale platform growth.
+					Senior Software Engineer & Technical Architect with 13+ years of experience building scalable backend platforms, static code analysis systems, and AI-driven developer tools. Currently leading engineering initiatives at BrowserStack, driving system architecture, AI adoption, and enterprise-scale platform growth.
 				</p>
 				<p>
 					I enjoy solving complex engineering problems, working closely with enterprise clients, and delivering production-grade systems that improve developer efficiency and code quality. Deep experience in static analysis, anti-pattern detection, IDE plugins, and integrating LLMs into real developer workflows.
@@ -134,18 +131,6 @@ const title = "Profile";
 		border-radius: 12px;
 	}
 
-	.profile-image {
-		flex-shrink: 0;
-	}
-
-	.profile-image img {
-		width: 150px;
-		height: 150px;
-		border-radius: 50%;
-		object-fit: cover;
-		border: 3px solid rgba(255, 255, 255, 0.35);
-	}
-
 	.profile-info h1 {
 		margin: 0 0 0.5rem 0;
 		font-size: clamp(1.8rem, 5vw, 2.5rem);
@@ -255,11 +240,6 @@ const title = "Profile";
 			flex-direction: column;
 			text-align: center;
 			padding: 1.5rem;
-		}
-
-		.profile-image img {
-			width: 110px;
-			height: 110px;
 		}
 
 		.profile-content {
